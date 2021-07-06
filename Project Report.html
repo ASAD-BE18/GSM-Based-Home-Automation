@@ -1,0 +1,400 @@
+<html>
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+			<style>footer {background: #aaa;color:white; height:30px; z-index:10000; position:relative;}
+	table, th, td {      border: 1px solid black;     border-collapse: collapse; }
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+    </style>
+		<title>
+						Introduction to Embedded Systems Project Report - (Asad Majeed, Shafqatullah)
+		</title>
+	</head>
+	
+	<body>
+	<div id="main-wrapper">
+		<div id="left-side">
+                    </div>
+                    <div id="right-side">
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title">
+				
+					Muhammad Asim Samejo
+				</div>
+			</div>
+			<hr>
+			<div id="nav-bar">
+				<div id="nav-bar-area">
+					<div class="link"><a href="#C1">Introduction</a></div><div class="separator"></div>
+					<div class="link"><a href="#C2">High Level Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C3">Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C4">Results</a></div><div class="separator"></div>
+					<div class="link"><a href="#C5">Conclusion</a></div><div class="separator"></div>
+					<div class="link"><a href="#C6">Appendix</a></div><div class="separator"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<hr>
+			<br><br>
+			
+				<div id="page-title">GSM Based Home Automation</div>
+				<div id="assignments">
+
+<br><br>
+<h2 id="C1">Introduction</h2>
+<br>
+Home automation refers to the controlling or managing  of home appliances by local networking or by remote control.
+Home automation is a system that enables you to control your home’s appliances more conveniently.
+It can be a simple system such as remote or automatic control of a few lights, or it can be a complex system that 
+that can control all major appliances  of your home. 
+Home automation system can give you remote or automatic control of home appliances.
+Home automation systems are becoming famous due to their control and managing.
+
+Our project will demonstrate one of the simple home automation system using GSM Communication.
+<br>
+
+    The aim of our project is to build an automation system for home so that we can control our home appliances via our cell phones.
+    
+    
+        We are using GSM for communication so that we should not be restricted to short range of our automation system.
+    
+
+    <br>
+<br>	
+<center><img src="images/FinalCase.jpg" height="350" width="500"/><br></center><br><br>
+<p><br>
+
+This automation system will be controlled through GSM communication.
+The wireless communication is increasing day by
+day. This has motivated us to use mobile phones to remotely
+control household appliances and to receive a feedback SMS. In this project we
+are building a remote appliance control system which can control
+different household appliances by sending a SMS from a
+mobile phone. This controller is extremely handy at places
+where we have to control the ON and OFF switching of the
+devices as no wired connection is required between the switch
+and the home appliances as it can be controlled from any place
+in this world. The microcontroller would then control the
+home appliances based on the information given to it and send
+a feedback. It also uses temperature and humidity sensors to analyze the enviroment conditions.
+The enviromental condition can help us for controlling various appliances.
+The proposed solution is easy to use, simple and secure.
+</p>
+<br>
+<br>
+<b>
+Team Members:
+</b>
+<br>
+<ul>
+    <li><b>Asad Majeed (BE-IV CSE)</b></li>
+    <li><b>Shafqatullah (BE-IV EE)</b></li>
+</ul>
+<br>
+<center><img src="images/sketch.jpg" height="450" width="500" /><br></center>
+<br><br>
+<h2 id="C2">High Level Design</h2>    
+
+<br>
+<center><img src="images/block.PNG" height="480" /><br></center>
+<br><br>
+<ul>
+    <li> <b>ATMega328p Micro-controller:</b> The ATmega328 is a single-chip microcontroller created by Atmel.
+        It has a modified Harvard architecture 8-bit RISC processor core.
+        The Atmel 8-bit AVR RISC-based microcontroller combines 32 KB ISP flash memory with read-while-write capabilities,
+        1 KB EEPROM, 2 KB SRAM, 23 general purpose I/O lines,
+        32 general purpose working registers, three flexible timer/counters with compare modes, internal and external interrupts, serial programmable USART, a byte-oriented 2-wire serial interface and SPI serial port. The device operates between 1.8-5.5 volts.
+        The device achieves throughput approaching 1 MIPS per MHz.
+        <br>
+     <center>  <image src="images/ATMega328p.jpg" height="300" width="300"/></center>
+    </li>
+
+
+    <li> <b>GSM-Module SIM900:</b> The SIM900 shield packs a surprising amount of features into its little frame. Some of them are listed below:
+
+ <li>Supports Quad-band: GSM850, EGSM900, DCS1800 and PCS1900
+<li>Connect onto any global GSM network with any 2G SIM
+<li>Make and receive voice calls using an external earphone & electret microphone
+<li>Send and receive SMS messages
+<li>Send and receive GPRS data (TCP/IP, HTTP, etc.)
+<li>Scan and receive FM radio broadcasts
+<li>Transmit Power:
+<li>Class 4 (2W) for GSM850
+<li>Class 1 (1W) for DCS1800
+<li>Serial-based AT Command Set
+<li>Accepts Full-size SIM Card
+<center>  <image src="images/GSM.jpg" height="300" width="300"/></center>
+
+    <li><b>Relay module:</b> A 5V 4-channel relay interface board, and each channel needs a 15-20mA driver current. It can be used to control various appliances and equipment with large current. It is equiped with high-current relays that work under AC250V 10A or DC30V 10A.
+        It has a standard interface that can be controlled directly by microcontroller.<br>  
+    <center>  <image src="images/RelayModule.jpg" height="300" width="300"/></center></li>
+
+    <li><b>Humidity and temperature sensor:</b>The DHT22 is a basic, low-cost digital temperature and humidity sensor.
+        It uses a capacitive humidity sensor and a thermistor to measure the surrounding air, and spits out a digital signal on the data pin (no analog input pins needed).
+        It's fairly simple to use.
+        It has following features:
+    <li>Low cost</li>
+    <li>3 to 5V power and I/O</li>
+    <li>2.5mA max current use during conversion (while requesting data)</li>
+    <li>Good for 0-100% humidity readings with 2-5% accuracy</li>
+    <li>Good for -40 to 80°C temperature readings ±0.5°C accuracy</li>
+    <li>No more than 0.5 Hz sampling rate (once every 2 seconds)</li>
+
+    
+    <center>  <image src="images/Dht22.jpg" height="300" width="500"/></center>
+</li><br>
+<li><b>Nokia 5110LCD:</b>The Nokia 5110 is a basic graphic LCD screen for lots of applications. 
+    It was originally intended to be used as a cell phone screen.
+    This one is mounted on an easy to solder PCB.
+
+It uses the PCD8544 controller, which is the same used in the Nokia 3310 LCD.
+The PCD8544 is a low power CMOS LCD controller/driver, designed to drive a graphic display of 48 rows and 84 columns.
+All necessary functions for the display are provided in a single chip, including on-chip generation of LCD supply and bias voltages, resulting in a minimum of external components and low power consumption.
+The PCD8544 interfaces to microcontrollers through a serial bus interface.
+ <center>  <image src="images/Nokia5110LCD.jpg" height="300" width="300"/></center>
+</li> 
+
+</ul>
+<br>
+<br><br>
+<h4>Deligation of Tasks</h4>
+<center><img src="images/progress.png"/><br></center><br><br>
+<br><br>
+ 
+ <h4>Intellectual Properties and Ethics Considerations</h4>
+ When we were assigned this project,
+ we searched on the internet for this project.
+ There were many resources on the internet that were available, but we have to first interfaces
+ different components so we searched for their interfacing. "LastMinuteEngineers" website
+ was very helpful for providing information about interfacing SIM900. 
+ For interfacing DHT22 and Nokia5110LCD "Arduino"s website was very helpful.
+ There were present many toturials about this stuff.
+ For interfacing Relay Modules with "Mywikis" provid some essential information.
+ For "GSM BASED HOME Automation" Project "alselectro wordpress" toturial was very helpful.
+ From the above mentioned sites there were many useful codes and libraries were available.
+ I have also included their links in the References.
+ I have devoted this project for the open-source community.
+ You can use the project files by given links in the end of documents.
+ <h4>Commercialization Aspects</h4>
+ 
+Because it is a prototype so we can't sell it in the market. 
+For the future, We have decided to improve this model.
+Improvement will decrease the cost and improve its efficiency and  will add some new features,
+ so that we could sell product in the market. 
+
+
+<br><br><br><br>
+<h2 id="C3">Design</h2> 
+The Design process has several layers to it. Electrical Design, Software Design, Final Hardware Assembly etc.<br><br>
+ <br><br>
+<h4>Electrical Circuit</h4>
+<br>
+<center><img src="images/Electrical_Schematic.png"/><br></center><br>
+To design our PCB for microcontroller ATMega328p we used EAGLE.
+In eagle schematic we used two 8 pin connectors that is connected to 
+ digital pins 7 and 8 of ATMega328p for GSM Module. 
+ A 6 pin connector is also used for connecting 
+GSM Module ground to microcontroller's ground.
+We used a 8 pin connector that is connected to 
+ digital pins 2,3,4,
+5,6 and 5V,Ground of microcontroller for Nokia 5110 LCD.
+We used a 6 pin connector that is connected to 
+digital pins 9,10,11,12 and 5V,Ground of microcontroller for 4 Channrelay Module.
+We used a 3 pin connector that is connected to digital pin
+ 13 and 5V,Ground of microcontroller for DHT22 sensor.
+We used a 6 pin connector for FTDI that is connected to 
+ UART PINS(0,1),RST,5V and GND.
+We used a 3x2 connector for ISP header.
+It is connect to 5V,GND,D11,D12,D13 and RST pins of microcontroller.
+We used a 2 pin connector to power up the board by connecting a 5V voltage source.
+Another 2 pin connector is used to for power up the board by a 7.4V battery so it is connected
+to a regulator.
+For testing purpose we also conneted a LED on D13 and for power checking a power LED is also connected to 5V and GND.
+A reset button is connected to 5V,GND and RST.
+
+<br>
+<h4>PCB Layout</h4>
+We selected packages for components that was available in our FABLAB. 
+After a week of continous work we completed our PCB routing. We designed our pcb in large size so that
+GSM Module and RelayModule can be placed under it.
+We also routed connectors for the analog pins so that we can use it if we will need.
+With the help of FABLAB Assistant Engr. Nadir Ali we were able to design the following PCB
+<br><br>
+<br><b>Design in EAGLE</b><br><br>
+<center><img src="images/PCB.png" width="500" height="500" /><br></center><br>
+Since we have finished the design process in EAGLE so now we have to print it.
+In FABLAB SIBAU we have <b>"Roland SRM20"</b> which is used to print PCBs.
+<br><br>
+<center><image src="images/Roland.jpg" width="500" height="600"/></center>
+<br><br>We generated rml files for the machine from fabmodules.org and generated files were given
+to the machine to start printing the PCB. After 30 minutes our PCB was milled and ready to
+be soldered.
+<br>
+<br><br><b> Milled PCB </b><br><br>
+<center><img src="images/milled.png" width="500" height="500" /><br></center><br>
+We generated BOM files from EAGLE and gave it to the FABLAB Assistant Engr.Nadir Ali.
+He gave us the required components which are shown below.<br><br>
+
+<br><b>BOM for PCB</b><br>
+ <center>  <image src="images/BOM.jpg" height="500" width="500"/></center>
+<br><b>Burning Bootloader</b><br>
+We soldered the components that were necessary for our microcontroller so that we can check our board.
+Then we connected the ISP header to ISP Programmer and from Arduino IDE burned the bootloader.
+It was working fine.<br> Then we soldered our board. We left analog pin connectors because we were not using them.
+<br><br><center><img src="images/bootloader.png" widht="500" height="500" /></center><br><br>
+<b>After Complete Soldering</b><br><br>
+<br><br>
+<center><img src="images/PopulatedPCB.jpg" width="500" height="500"/></center><br><br><br>
+Altough the given picture is not the picture of newly soldered PCB.<br><br> 
+<h4>Software Development</h4>
+For our project we need to develop a complex code so that it can handle the all the components.
+So we divided our code into various functions.
+We used a function gsmStart so that it can give GSM-Module some necessary commands for starting.
+We used a function checkSMS so that it can check the received sms and decode it.
+We used a function readSensor so that it can read the value from sensor and print it on the screen.
+Here is the abstract flow chart of our program.<br><br>
+<center><img src="images/FC.png" height="800" width="500" /><br></center>
+<br><br>
+<b>Functional Circuit</b><br>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/76IvGyFj6Sw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe></center>
+
+<h4>Design of finished Product</h4>
+
+To design the enclosure we decided to go for a 3D design.
+In FABLAB SIBAU we have <b>"UltiMaker"</b> which is a 3D printer.
+<br><br>
+<center><image src="images/Ultimaker.jpg" height="500" width="500" /></center>
+<br><br>
+We used SOLIDWORKS to design our enclosure.
+After the hardwork of a week and with the help of FABLAB Assistant Engr.Azmat Hussain we were able to create following 
+CAD Design:<br><br>
+<center><image src="images/Case.jpg" height="350" width="500"/><br></center><br>
+ The above given design is our 2nd design. Our first design was not accurate in measurement so we designed other box
+ Our first design was:<br><br>
+ 
+ <center><image src="images/case1.jpg" height="450" width="500"/><br></center><br>
+
+<br><br>
+<br><br>
+<b>Price of the Project</b>
+<br><br>Given approx. bill of project in USD. You can buy the required components from your nearest 
+store or can order online.<br><br>
+<center><image src="images/Bill.png" height="450" width="500"/><br></center><br>
+<br>Given the list of components for the PCB:<br><br>
+<center><image src="images/BillPcb.png" height="450" width="500"/><br></center><br>
+<h2 id="C4">Results</h2> 
+<br><br>
+
+<br><br>
+<center> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/28a1o973j6M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe></center>
+<br><br>
+
+<br><br>
+<h2 id="C5">Conclusions</h2> 
+
+ <br>
+
+When we were assigned this project, we were having no knowledge about Embedded Systems.
+We searched about the project on the internet and found many projects similar to projects.
+Most of the projects were using SIM900 for GSM communication and Arduino as a microcontroller so 
+we decided to use these components in our project.
+We decided that our project should be distinct from them, 
+we added a temperature sensor and a proper response
+system so that it can give a user a proper response.
+We first decided to interface our required components.
+It took our alot of time just to interface SIM900 with Arduino.
+We first tried to send and receive SMS using SIM900 and Arduino.
+Our first received SMS from SIM900:<br><br>
+<center> <image src="images/sms.jpg" height="500" width="500" /> </center><br><br>
+After sending and receiving SMS with SIM900 we decided to control a relay using sms.
+Our first working circuit design was:<br><br>
+<center> <image src="images/interfacing.jpg" height="500" width="500" /> </center><br><br>
+After that we decided to interface a temperature sensor and a LCD with Arduino.
+But before that we have to choose a proper sensor and a LCD for our project.
+After searching on internet we found DHT22 sensor suitable for our project.
+To our luck it was also available in FABLAB.
+For LCD, first we decided use 16x2 LCD but since it was large in size and power requirement 
+we decided to use another LCD. After searching on internet we found Nokia5110 LCD suitable 
+for our project so we decided to use it in our project. 
+After getting the required components it took us a short time to interface them with Arduino 
+as compared to SIM900.
+In the end we decided to build a microcontroller PCB in replacement for 
+Arduino.
+Altough this journey was very hard but our hardwork 
+learned  us many essential skills in this course.
+During this journey we have learned about different microcontrollers and their architecture.
+We have learned how to program a microcontroller.
+We have learned how to interface different components with them.
+To sum up this discussion we would like to include the following points.
+During our project,
+We have learned:
+<ul>
+<li>How to choose the components that are suitable to our needs.
+<li>How to integrate components in a circuit.
+<li>How to program a microcontroller to manage the components.
+<li>How to use functions to manage our code.
+<li>How to use interfacing protocols.
+<li>How to use EAGLE to design a PCB.
+<li>How to design an enclosure for a circuit using SOLIDWORKS.
+<li>How to manage different components together in a complex circuit.
+<li>How to troubleshoot.
+</li>
+In the end a very helpful skill that we learned is project management. 
+
+<br><br>
+
+<br><br>
+<h2 id="C6">Appendix</h2>
+<br>
+ <font color="Blue">
+<b>
+  <a href="PCB/PCB.rar">  Eagle PCB Layout files </a></b>
+    
+</b>
+<br>
+<b><a href="CAD/CAD.rar">CAD Files </a>
+<br>
+<a href="Project.rar">Code </a>
+</b>
+<br>
+</font>
+<b><br>
+    References:<br>
+    <font color="Blue">
+    <a href="sparkfun.com">Sparkfun</a><br>
+    <a href="wikipedia.org">Wikipedia</a><br>
+
+    <a href="https://lastminuteengineers.com/sim900-gsm-shield-arduino-tutorial">Interfacing SIM900</a>
+
+<br>
+<a href="https://create.arduino.cc/projecthub/muhammad-aqib/interfacing-nokia-5110-lcd-with-arduino-7bfcdd">Interfacing Nokia 5110LCD and DHT22</a>
+<br>
+<a href="https://alselectro.wordpress.com/2018/04/06/gsm-controlled-relay-with-arduino">Controlling relays using Arduino with SIM900</a>
+<br>
+</font>
+</b>
+
+
+<br><br>
+
+<br><br>
+
+
+
+				
+			
+			
+		
+                                </div>
+                </div>
+        </div>
+	</body>
+</html>

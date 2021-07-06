@@ -1,0 +1,152 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+#main-wrapper{
+	overflow: hidden;
+    position: relative;
+}
+
+#left-side{
+	width:150px;
+	height:100%;
+	left:0;
+	top:0;
+	background-image:url("../graphics/ajrak.png");	
+	position:absolute;
+}
+
+#right-side{
+	width:150px;
+	height:100%;
+	right:0;
+	top:0;
+	position:absolute;
+	background-image:url("../graphics/ajrak.png");
+	
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+#main{
+	width:70%;
+	
+	margin-left:15%;
+	
+}
+
+#header{
+	height:15%;
+	border-bottom: 1; 
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); 
+}
+
+#header-title{
+	width:100%;
+	text-align:center;
+	padding-top:2%;
+	
+}
+
+#nav-bar-area{
+	width:70%;
+	margin:auto;
+	padding-left:5%;
+}
+
+.link{
+	width:20%;
+	text-align:center;
+	float:left;
+}
+
+.link a{
+	text-decoration:none;
+	color:black;
+}
+
+.separator{
+	border-left:1px solid #38546d; 
+    border-right:1px solid #16222c; 
+	height:20px;
+	float:left;
+	width:2px;
+}
+
+.clear{
+	clear:both;
+	width:0px;
+}
+
+#page-title{
+	text-align:center;
+	font-family: fantasy;
+	font-size: 36px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+/*************************************** Image Style ****************************************/
+#assignment-container{
+	width:100%;
+	margin:auto;
+	
+}
+
+.container {
+    position: relative;
+    width: 25%;
+	float:left;
+	margin:3%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-radius:100%;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 28px;
+  padding: 16px 32px;
+}
+
+footer {background: #aaa;color:white; height:30px; z-index:10000; position:relative;}
+
+/**************************************************************************************
